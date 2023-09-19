@@ -60,18 +60,18 @@ public class TeleOpMode extends LinearOpMode {
 
     public void forward()
     {
-        frontRight.setPower(gamepad1.left_stick_x);
-        backRight.setPower(gamepad1.left_stick_x);
-        frontLeft.setPower(gamepad1.left_stick_x);
-        backLeft.setPower(gamepad1.left_stick_x);
+        frontRight.setPower(1);
+        backRight.setPower(1);
+        frontLeft.setPower(1);
+        backLeft.setPower(1);
     }
 
     public void backward()
     {
-        frontRight.setPower(gamepad1.left_stick_x);
-        backRight.setPower(gamepad1.left_stick_x);
-        frontLeft.setPower(gamepad1.left_stick_x);
-        backLeft.setPower(gamepad1.left_stick_x);
+        frontRight.setPower(-1);
+        backRight.setPower(-1);
+        frontLeft.setPower(-1);
+        backLeft.setPower(-1);
     }
 
     public void strafeL()
@@ -84,17 +84,28 @@ public class TeleOpMode extends LinearOpMode {
 
     public void strafeR()
     {
-
+        frontRight.setPower(-1);
+        frontLeft.setPower(-1);
+        backRight.setPower(1);
+        backLeft.setPower(1);
     }
 
     public void turnL()
     {
+        frontRight.setPower(1);
+        frontLeft.setPower(-1);
+        backRight.setPower(1);
+        backLeft.setPower(-1);
+
 
     }
 
     public void turnR()
     {
-
+        frontRight.setPower(-1);
+        frontLeft.setPower(1);
+        backRight.setPower(-1);
+        backLeft.setPower(1);
     }
 
     public void stopMotors()
